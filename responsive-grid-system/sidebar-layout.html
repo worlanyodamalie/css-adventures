@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar layout</title>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <span>Sidebar content</span>
+        <span>Main content</span>
+    </div>
+    
+</body>
+<style>
+    *{
+   box-sizing: border-box; 
+}
+
+:root{
+    --minColWidth: 15rem;
+    --gridGap: 2rem;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Baloo 2", sans-serif;
+}
+
+span {
+        border: 2px dashed currentcolor;
+        border-radius: 4px;
+        min-height: 15vh;
+        padding: 1rem;
+        color: #0178d4;
+        font-size: 3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sidebar{
+        display: grid;
+        grid-template-columns: fit-content(20ch) minmax(min(50vw , 30ch) , 1fr);
+        grid-gap: 2rem;
+    }
+</style>
+</html>
